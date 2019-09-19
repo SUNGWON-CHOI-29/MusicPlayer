@@ -17,6 +17,7 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* MusicPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MusicPlayerTests.m */; };
+		6FD06218233370320074DC3E /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD06217233370320074DC3E /* dummy.swift */; };
 		91798D62A7AFE162DB53D536 /* libPods-MusicPlayer-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90AFFA431E36DDFE291C190F /* libPods-MusicPlayer-tvOSTests.a */; };
 		B6AFEF3D7DBD4367988D5416 /* libPods-MusicPlayer-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D49A4AD7C0971CB3E97ED1 /* libPods-MusicPlayer-tvOS.a */; };
 		C4AA3B812E1C0F15BBBC02BF /* libPods-MusicPlayerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 728AD3084B7C1E33B479F3DC /* libPods-MusicPlayerTests.a */; };
@@ -58,6 +59,8 @@
 		35B2517439A70EB443B18485 /* Pods-MusicPlayer-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicPlayer-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-MusicPlayer-tvOSTests/Pods-MusicPlayer-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		37D49A4AD7C0971CB3E97ED1 /* libPods-MusicPlayer-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicPlayer-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		66E76FB0C30746030121427B /* Pods-MusicPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicPlayer.debug.xcconfig"; path = "Target Support Files/Pods-MusicPlayer/Pods-MusicPlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		6FD06216233370310074DC3E /* MusicPlayer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicPlayer-Bridging-Header.h"; sourceTree = "<group>"; };
+		6FD06217233370320074DC3E /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
 		728AD3084B7C1E33B479F3DC /* libPods-MusicPlayerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicPlayerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74A25343BDE1144E07141539 /* Pods-MusicPlayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicPlayerTests.release.xcconfig"; path = "Target Support Files/Pods-MusicPlayerTests/Pods-MusicPlayerTests.release.xcconfig"; sourceTree = "<group>"; };
 		776059FF5C4430E7C85830E3 /* libPods-MusicPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +135,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				6FD06217233370320074DC3E /* dummy.swift */,
+				6FD06216233370310074DC3E /* MusicPlayer-Bridging-Header.h */,
 			);
 			name = MusicPlayer;
 			sourceTree = "<group>";
@@ -290,6 +295,9 @@
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1030;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -528,6 +536,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				6FD06218233370320074DC3E /* dummy.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,6 +590,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA185B5692D048D834449F68 /* Pods-MusicPlayerTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -605,6 +615,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 74A25343BDE1144E07141539 /* Pods-MusicPlayerTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				HEADER_SEARCH_PATHS = "$(inherited)";
@@ -627,6 +638,7 @@
 			baseConfigurationReference = 66E76FB0C30746030121427B /* Pods-MusicPlayer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = "";
@@ -643,6 +655,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = MusicPlayer;
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicPlayer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -652,6 +667,7 @@
 			baseConfigurationReference = 2D0A4E3A15E6E10B402DDD3C /* Pods-MusicPlayer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = (
@@ -667,6 +683,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = MusicPlayer;
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicPlayer-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
